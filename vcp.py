@@ -6,6 +6,8 @@ import ctypes
 from ctypes import wintypes
 import vcp_code
 from typing import Tuple
+# from system_hotkey import SystemHotkey
+import keyboard
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -19,6 +21,7 @@ _LOGGER = logging.getLogger(__name__)
 https://milek7.pl/ddcbacklight/mccs.pdf
 
 """
+
 
 
 # #################################### Use Windows API to enumerate monitors
@@ -145,6 +148,10 @@ class PhyMonitor(object):
         self._get_monitor_caps()
         if self._caps_string != '':
             self._get_model_info()
+        keyboard.add_hotkey('ctrl+shift+alt+3', lambda: self.set_vcp_value_by_name('Input Source', 0x0F))
+        keyboard.add_hotkey('ctrl+shift+alt+1', lambda: self.set_vcp_value_by_name('Input Source', 0x11))
+        keyboard.add_hotkey('ctrl+shift+alt+2', lambda: self.set_vcp_value_by_name('Input Source', 0x12))
+
 
     def _get_monitor_caps(self):
         """
@@ -564,5 +571,6 @@ if __name__ == '__main__':
             continue
         _LOGGER.info('found {}'.format(monitor.model))
         phy_monitors.append(monitor)
-
     test_monitor = phy_monitors[0]
+    # hk = SystemHotkey()
+    # hk.register(('control','shift','h','1'), callback=lambda x: print('Easy'))

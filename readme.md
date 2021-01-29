@@ -32,6 +32,17 @@ HDMI/DP音量调整等更多功能由于显示器不支持没法测试就没加�
 ![GUI](https://github.com/dot-osk/monitor_ctrl/raw/master/doc/img/Capture.JPG)
 
 
+# 安装依赖
+
+```shell
+pip install keyboard
+```
+
+# 快速切换快捷键
+    - control+shift+alt+3 dp
+    - control+shift+alt+1 hdmi1
+    - control+shift+alt+2 hdmi2
+    
 
 # 系统需求
 

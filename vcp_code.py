@@ -248,22 +248,7 @@ OSD_LANG_CODE = {
 
 # 输入源设置
 INPUT_SRC_CODE = {
-    'Analog video (R/G/B) 1': 0x01,
-    'Analog video (R/G/B) 2': 0x02,
-    'Digital video (TMDS) 1 DVI 1': 0x03,
-    'Digital video (TMDS) 2 DVI 2': 0x04,
-    'Composite video 1': 0x05,
-    'Composite video 2': 0x06,
-    'S-video 1': 0x07,
-    'S-video 2': 0x08,
-    'Tuner 1': 0x09,
-    'Tuner 2': 0x0A,
-    'Tuner 3': 0x0B,
-    'Component video (YPbPr / YCbCr) 1': 0x0C,
-    'Component video (YPbPr / YCbCr) 2': 0x0D,
-    'Component video (YPbPr / YCbCr) 3': 0x0E,
     'DisplayPort 1': 0x0F,
-    'DisplayPort 2': 0x10,
     'Digital Video (TMDS) 3 HDMI 1': 0x11,
     'Digital Video (TMDS) 4 HDMI 2': 0x12
 }
